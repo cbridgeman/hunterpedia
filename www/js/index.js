@@ -33,6 +33,21 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-//        alert("HOPE THIS WORKS!!!");
+        var db = window.openDatabase("hunterpedia", "1.0", "hunterpedia", 1000000);
+        db.transaction(populateDB, errorCB, successCB);
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS MONSTER');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS MONSTER (id unique, name, type, weakness)');
+            tx.executeSql('INSERT INTO MONSTER (id, name, type, weakness) VALUES (1, "Rathalos", "Flying Wyvern", "Ice")');
+            tx.executeSql('INSERT INTO MONSTER (id, name, type, weakness) VALUES (2, "Rathian", "Flying Wyvern", "Thunder")');
+        }
+
+        function errorCB(err) {
+            alert("Error processing SQL: " + err);
+        }
+
+        function successCB() {
+            alert("SUCCESS!!!");
+        }
     }
 };
