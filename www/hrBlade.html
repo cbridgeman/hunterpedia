@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jQuery/jquery.mobile-1.4.2.css" />
+    <script type="text/javascript" src="js/jQuery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jQuery/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/cordova.js"></script>
+    <title>Hello World</title>
+</head>
+<body>
+<ul id="armorList" data-role="listview"></ul>
+
+<script type="text/javascript">
+    $(function() {
+        var db = window.openDatabase("hunterpedia", "1.0", "hunterpedia", 1000000);
+        db.transaction(function(tx) {
+            tx.executeSql('SELECT * FROM ARMOR WHERE rank="G"', [], function(rx, results) {
+                for (var i = 0; i < results.rows.length; i++) {
+//                        alert(results.rows.item(i).name);
+                    $('#armorList').append(
+                            '<li><a href="armorDetails.html?armorId=' + results.rows.item(i).id + '" class="selectedArmor">' +
+                                    '<h3>' + results.rows.item(i).name + '</h3>' +
+                                    '<img src="img/gRankArmor/' + results.rows.item(i).img_alias + "_blademaster_pieces.png" + '">' +
+                            '</a></li>');
+                }
+            }, function() {alert("INNER FAAAAIIIILLLL!")});
+        }, function() {alert("OUTER FAAAAIIILLL!")});
+
+//        $('.selectedArmor').click(function() {
+//            $.mobile.pageContainer.pagecontainer('change', '#armorDetails.html', {
+//                armorId: $(this).attr('id')
+//            });
+//        });
+    });
+</script>
+</body>
+</html>
