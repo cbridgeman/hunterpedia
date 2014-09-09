@@ -29,10 +29,11 @@
                     for (var i = 0; i < results.rows.length; i++) {
 //                        alert(results.rows.item(i).name);
                         $('#armorList').append(
-                                '<li><a href="armorDetails.html?armorId=' + results.rows.item(i).id + '" class="selectedArmor">' +
-                                        '<h3>' + results.rows.item(i).name + '</h3>' +
-                                        '<img src="img/gRankArmor/' + results.rows.item(i).img_alias + "_blademaster_pieces.png" + '">' +
-                                        '</a></li>');
+                            '<li><a href="armorDetails.html?armorId=' + results.rows.item(i).id + '" class="selectedArmor">' +
+                                '<h3>' + results.rows.item(i).name + '</h3>' +
+                                '<img src="img/' + results.rows.item(i).rank + "RankArmor/" + results.rows.item(i).img_alias + "_blademaster_pieces.png" + '" width="100%" />' +
+                            '</a></li>'
+                        );
                     }
                 }, function() {alert("INNER FAAAAIIIILLLL!")});
             }, function() {alert("OUTER FAAAAIIILLL!")});
