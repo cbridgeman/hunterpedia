@@ -11,20 +11,19 @@
         <link rel="stylesheet" type="text/css" href="css/jQuery/jquery.mobile-1.4.2.css" />
 		<script type="text/javascript" src="js/jQuery/jquery-1.8.2.min.js"></script>
 		<script type="text/javascript" src="js/jQuery/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/cordova.js"></script>
         <title>Hello World</title>
     </head>
     <body>
         <ul data-role="listview">
-			<li><a href="lrBlade.html">Low Rank Blademaster</a></li>
-			<li><a href="hrBlade.html">High Rank Blademaster</a></li>
-			<li><a href="grBlade.html">G Rank Blademaster</a></li>
-			<li><a href="lrGunner.html">Low Rank Gunner</a></li>
-			<li><a href="hrGunner.html">High Rank Gunner</a></li>
-			<li><a href="grGunner.html">G Rank Gunner</a></li>
+			<li><a href="armorList.html?rank=Low&type=Blademaster">Low Rank Blademaster</a></li>
+			<li><a href="armorList.html?rank=High&type=Blademaster">High Rank Blademaster</a></li>
+			<li><a href="armorList.html?rank=G&type=Blademaster">G Rank Blademaster</a></li>
+			<li><a href="armorList.html?rank=Low&type=Gunner">Low Rank Gunner</a></li>
+			<li><a href="armorList.html?rank=High&type=Gunner">High Rank Gunner</a></li>
+			<li><a href="armorList.html?rank=G&type=Gunner">G Rank Gunner</a></li>
 		</ul>
 		
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
