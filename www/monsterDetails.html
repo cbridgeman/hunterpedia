@@ -15,26 +15,27 @@
     <title>Hello World</title>
 </head>
 <body>
-<ul id="armorList" data-role="listview"></ul>
+
+<div id="monsterContainer"></div>
 
 <script type="text/javascript">
     $(function() {
         setTimeout(function() {
-            var query = (document.location.search).replace('?rank=','').split('&')[0];
+            var query = (document.location.search).replace('?monsterId=','');
 //            alert(query);
 
             var db = window.openDatabase("hunterpedia", "1.0", "hunterpedia", 1000000);
             db.transaction(function(tx) {
-                tx.executeSql('SELECT * FROM ARMOR WHERE rank="' + query + '"', [], function(rx, results) {
-                    for (var i = 0; i < results.rows.length; i++) {
-                        var armor = results.rows.item(i);
-                        $('#armorList').append(
-                            '<li><a href="armorDetails.html?armorId=' + armor.id + '">' +
-                                '<h3>' + armor.name + '</h3>' +
-                                '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + "_blademaster_pieces.png" + '" width="100%" />' +
-                            '</a></li>'
-                        );
-                    }
+                tx.executeSql('SELECT * FROM MONSTER WHERE id=' + query + '', [], function(rx, results) {
+                    var monster = results.rows.item(0);
+                    var http = new XMLHttpRequest();
+                    http.open('HEAD', 'img/' + monster.img_alias + '.png', false);
+                    http.send();
+                    var image = (http.status == 200) ? monster.img_alias : 'smallMonsters/' + monster.img_alias;
+                    $('#monsterContainer').append(
+                        '<h1>' + monster.name + '</h1>' +
+                        '<img src="img/' + image + '.png" alt="N/A" width="50%" style="display: block; margin: auto;" />'
+                    );
                 }, function() {alert("INNER FAAAAIIIILLLL!")});
             }, function() {alert("OUTER FAAAAIIILLL!")});
         }, 1000);
