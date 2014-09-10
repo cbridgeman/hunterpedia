@@ -38,7 +38,9 @@
                     var j = 0;
                     for (var i = 0; i < results.rows.length; i++) {
                         var monster = results.rows.item(i);
-                        var image = (monster.img_alias != "alatreon" || monster.img_alias != "dMiralis") ? (monster.img_alias + "Icon") : "questionMarkIcon";
+                        var image = (monster.img_alias != "alatreon" && monster.img_alias != "dMiralis") ? (monster.img_alias + "Icon") : "questionMarkIcon";
+                        //alert(monster.img_im)
+                        //alert(image);
                         $('#lMonsters').append(
                             '<div class="ui-block-' + block[j] + '">' +
                                 '<a href="monsterDetails.html?monsterId=' + monster.id + '">' +
