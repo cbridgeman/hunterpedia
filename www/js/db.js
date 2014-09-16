@@ -14,10 +14,27 @@ function onDeviceReady() {
         tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Yukumo Sky Armor", "Blademaster", "High", "yukumo")');i++;
         tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Piscine S Armor", "Blademaster", "High", "piscine")');i++;
         //G-RANK BLADEMASTER
-        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Wroggi X Armor", "Blademaster", "G", "wroggi")');i++;
-        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Volvidon X Armor", "Blademaster", "G", "volvidon")');i++;
-        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Lagombi X Armor", "Blademaster", "G", "lagombi")');i++;
-        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Baggi X Armor", "Blademaster", "G", "baggi")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Wroggi X Armor", "Blademaster", "G", "wroggiX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Volvidon X Armor", "Blademaster", "G", "volvidonX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Lagombi X Armor", "Blademaster", "G", "lagombiX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Baggi X Armor", "Blademaster", "G", "baggiX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Barioth X Armor", "Blademaster", "G", "bariothX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Barroth X Armor", "Blademaster", "G", "barrothX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Dianthus Weal Armor", "Blademaster", "G", "dianthusWeal")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Duramboros X Armor", "Blademaster", "G", "duramborosX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Gigginox X Armor", "Blademaster", "G", "gigginoxX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Gobul X Armor", "Blademaster", "G", "gobulX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Ingot X Armor", "Blademaster", "G", "ingotX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Lagombi X Armor", "Blademaster", "G", "lagombiX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Ludroth X Armor", "Blademaster", "G", "ludrothX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Mosgharl X Armor", "Blademaster", "G", "mosgharlX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Nibelsnarf X Armor", "Blademaster", "G", "nibelsnarfX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Qurupeco X Armor", "Blademaster", "G", "qurupecoX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Rhopessa X Armor", "Blademaster", "G", "rhopessaX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Volvidon X Armor", "Blademaster", "G", "volvidonX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Wroggi X Armor", "Blademaster", "G", "wroggiX")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Zinogre Z Armor", "Blademaster", "G", "zinogreZ")');i++;
+        tx.executeSql('INSERT INTO ARMOR (id, name, type, rank, img_alias) VALUES (' + i + ', "Helios Z Armor", "Blademaster", "G", "heliosZ")');i++;
         //MONSTERS
         i = 1;
         tx.executeSql('DROP TABLE IF EXISTS MONSTER');

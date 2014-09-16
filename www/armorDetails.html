@@ -29,7 +29,7 @@
                 tx.executeSql('SELECT * FROM ARMOR WHERE id=' + query + '', [], function(rx, results) {
                     var armor = results.rows.item(0);
                     var http = new XMLHttpRequest();
-                    http.open('HEAD', 'img/highRankArmor/' + armor.img_alias + '.png', false);
+                    http.open('HEAD', 'img/' + armor.rank + 'RankArmor/' + armor.img_alias + '.png', false);
                     http.send();
                     var image = (http.status == 200) ? armor.img_alias : "armorSilhouette";
                     $('#armorContainer').append(

@@ -21,7 +21,6 @@
     $(function() {
         setTimeout(function() {
             var query = (document.location.search).replace('?rank=','').split('&')[0];
-//            alert(query);
 
             var db = window.openDatabase("hunterpedia", "1.0", "hunterpedia", 1000000);
             db.transaction(function(tx) {

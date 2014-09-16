@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jQuery/jquery.mobile-1.4.2.css" />
+    <script type="text/javascript" src="js/jQuery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jQuery/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/cordova.js"></script>
+    <title>Hello World</title>
+</head>
+<body>
+
+<div id="weaponContainer"></div>
+
+<script type="text/javascript">
+//    $(function() {
+//        setTimeout(function() {
+//            var query = (document.location.search).replace('?armorId=','');
+////            alert(query);
+//
+//            var db = window.openDatabase("hunterpedia", "1.0", "hunterpedia", 1000000);
+//            db.transaction(function(tx) {
+//                tx.executeSql('SELECT * FROM ARMOR WHERE id=' + query + '', [], function(rx, results) {
+//                    var armor = results.rows.item(0);
+//                    var http = new XMLHttpRequest();
+//                    http.open('HEAD', 'img/highRankArmor/' + armor.img_alias + '.png', false);
+//                    http.send();
+//                    var image = (http.status == 200) ? armor.img_alias : "armorSilhouette";
+//                    $('#armorContainer').append(
+//                            '<h1>' + armor.name + '</h1>' +
+//                                    '<img src="img/' + armor.rank + "RankArmor/" + image + '.png" width="100%" />' +
+//                                    '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + '_blademaster_pieces.png" width="100%" />' +
+//                                    '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + '_blademaster_skills.png" width="100%" />' +
+//                                    '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + '_blademaster_totals.png" width="100%" />'
+//                    );
+//                }, function() {alert("INNER FAAAAIIIILLLL!")});
+//            }, function() {alert("OUTER FAAAAIIILLL!")});
+//        }, 1000);
+//    });
+</script>
+</body>
+</html>
