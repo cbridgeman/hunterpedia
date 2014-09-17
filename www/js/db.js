@@ -93,6 +93,31 @@ function onDeviceReady() {
         tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Stygian Zinogre", "Fanged Wyvern", "Large", "Thunder", "sZinogre")');i++;
         //SMALL MONSTERS
         tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Altaroth", "Neopteron", "Small", "Fire", "altaroth")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Anteka", "Herbivore", "Small", "Fire", "anteka")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Aptonoth", "Herbivore", "Small", "Fire", "aptonoth")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Baggi", "Bird Wyvern", "Small", "Fire", "baggi")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Bnahabra", "Neopteron", "Small", "Fire", "bnahabra")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Bullfango", "Fanged Beast", "Small", "Fire", "bullfango")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Delex", "Piscine Wyvern", "Small", "Ice", "delex")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Epioth", "Herbivore", "Small", "Unknown", "epioth")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Felyne", "Lynian", "Small", "Unknown", "felyne")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Fish", "Fish", "Small", "None", "fish")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Gargwa", "Bird Wyvern", "Small", "Unknown", "gargwa")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Giggi", "Flying Wyvern", "Small", "Fire", "giggi")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Jaggi", "Bird Wyvern", "Small", "Fire", "jaggi")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Jaggia", "Bird Wyvern", "Small", "Fire", "jaggia")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Kelbi", "Herbivore", "Small", "None", "kelbi")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Ludroth", "Leviathan", "Small", "Thunder", "ludroth")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Melynx", "Lynian", "Small", "None", "melynx")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Popo", "Herbivore", "Small", "Fire", "popo")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Rhenoplos", "Herbivore", "Small", "Unknown", "rhenoplos")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Slagtoth", "Herbivore", "Small", "Fire", "slagtoth")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Uroktor", "Leviathan", "Small", "Water", "uroktor")');i++;
+        tx.executeSql('INSERT INTO MONSTER (id, name, type, size, weakness, img_alias) VALUES (' + i + ', "Wroggi", "Bird Wyvern", "Small", "Ice", "wroggi")');i++;
+        //WEAPONS
+        i = 1;
+        tx.executeSql('DROP TABLE IF EXISTS WEAPON');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS WEAPON (id unique, name, img_alias)');
     }
 
     function errorCB(err) {

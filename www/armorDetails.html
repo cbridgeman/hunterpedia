@@ -29,15 +29,15 @@
                 tx.executeSql('SELECT * FROM ARMOR WHERE id=' + query + '', [], function(rx, results) {
                     var armor = results.rows.item(0);
                     var http = new XMLHttpRequest();
-                    http.open('HEAD', 'img/' + armor.rank + 'RankArmor/' + armor.img_alias + '.png', false);
+                    http.open('HEAD', 'img/armor/' + armor.rank + 'Rank/' + armor.img_alias + '.png', false);
                     http.send();
                     var image = (http.status == 200) ? armor.img_alias : "armorSilhouette";
                     $('#armorContainer').append(
                         '<h1>' + armor.name + '</h1>' +
-                        '<img src="img/' + armor.rank + "RankArmor/" + image + '.png" width="100%" />' +
-                        '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + '_blademaster_pieces.png" width="100%" />' +
-                        '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + '_blademaster_skills.png" width="100%" />' +
-                        '<img src="img/' + armor.rank + "RankArmor/" + armor.img_alias + '_blademaster_totals.png" width="100%" />'
+                        '<img src="img/armor/' + armor.rank + "Rank/" + image + '.png" width="100%" />' +
+                        '<img src="img/armor/' + armor.rank + "Rank/" + armor.img_alias + '_blademaster_pieces.png" width="100%" />' +
+                        '<img src="img/armor/' + armor.rank + "Rank/" + armor.img_alias + '_blademaster_skills.png" width="100%" />' +
+                        '<img src="img/armor/' + armor.rank + "Rank/" + armor.img_alias + '_blademaster_totals.png" width="100%" />'
                     );
                 }, function() {alert("INNER FAAAAIIIILLLL!")});
             }, function() {alert("OUTER FAAAAIIILLL!")});
